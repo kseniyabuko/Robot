@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // creating details
 
         var samsungHand1 = SamsungHand(140)
         var sonyHand1 = SonyHand(110)
@@ -30,6 +31,8 @@ class MainActivity : AppCompatActivity() {
         var sonyLeg1 = SonyLeg(330)
         var toshibaLeg1 = ToshibaLeg(360)
 
+        // creating robots
+
         var robot1 = Robot(samsungHand1, toshibaHead1, sonyLeg1)
         robot1.action()
         robot1.getPrice()
@@ -42,6 +45,9 @@ class MainActivity : AppCompatActivity() {
         robot3.action()
         robot3.getPrice()
 
+
+        //finding the most expensive robot
+
         if (robot1.getPrice() > robot2.getPrice() && robot1.getPrice() > robot3.getPrice()) {
             println("Price of Robot1 is max")
         } else if (robot2.getPrice() > robot1.getPrice() && robot2.getPrice() > robot3.getPrice()) {
@@ -49,4 +55,4 @@ class MainActivity : AppCompatActivity() {
         } else
             println("Price of Robot3 is max")
     }
-    }
+}
